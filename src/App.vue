@@ -1,7 +1,10 @@
 <template>
   <v-app>
-    <header></header>
-
+    <!-- Navigation -->
+    <nav>
+      <top-header></top-header>
+    </nav>
+    <!-- Main Content -->
   <v-content>
    <v-container>
      <v-row>
@@ -9,7 +12,7 @@
           <all-servers></all-servers>
         </v-col>
         <v-col md='3'>
-          <h1>Hello</h1>
+          <server-details></server-details>
         </v-col>
       </v-row>
     </v-container>
@@ -20,14 +23,16 @@
 
 <script>
 import AllServers from './components/allServers'
-import Header from './components/header'
+import TopHeader from './components/header'
+import ServerDetails from './components/serverDetails'
 
 
 export default {
   name: 'App',
   components: {
     AllServers,
-    Header
+    TopHeader,
+    ServerDetails
   },
   data: () => ({
     //
