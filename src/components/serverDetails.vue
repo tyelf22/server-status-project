@@ -4,7 +4,7 @@
             <v-col>
                 <v-card>
                     <v-card-title>{{ title }}</v-card-title>
-                    <v-card-text> {{}} </v-card-text>
+                    <v-card-text> {{ status }} </v-card-text>
                 </v-card>
             </v-col>
         </v-row>
@@ -15,15 +15,27 @@
 import { bus } from '../main';
 export default {
     data: () => ({
-        title: 'Server Details',
+        title: 'Select Server',
+        status: 'Unavailable'
     }),
     created() {
-        bus.$on('titleOneChanged', (data) => {
+        bus.$on('titleOneChanged', (data, server) => {
             this.title = data;
+            this.status = server;
         });
 
-        bus.$on('titleTwoChanged', (data) => {
+        bus.$on('titleTwoChanged', (data, server) => {
             this.title = data;
+            this.status = server;
+        });
+
+        bus.$on('titleThreeChanged', (data, server) => {
+            this.title = data;
+            this.status = server;
+        });
+        bus.$on('titleFourChanged', (data, server) => {
+            this.title = data;
+            this.status = server;
         });
     }
     

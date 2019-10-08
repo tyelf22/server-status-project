@@ -6,18 +6,11 @@
     </nav>
     <!-- Main Content -->
   <v-content>
-   <v-container>
-     <v-row>
-       <v-col md="9">
-          <all-servers></all-servers>
-        </v-col>
-        <v-col md='3'>
-          <server-details></server-details>
-        </v-col>
-      </v-row>
-    </v-container>
+      <server-details></server-details>
+      <all-servers></all-servers>
+ 
   </v-content>
-
+     <bottom-footer></bottom-footer>
   </v-app>
 </template>
 
@@ -25,6 +18,7 @@
 import AllServers from './components/allServers'
 import TopHeader from './components/header'
 import ServerDetails from './components/serverDetails'
+import BottomFooter from './components/footer'
 
 
 export default {
@@ -32,7 +26,8 @@ export default {
   components: {
     AllServers,
     TopHeader,
-    ServerDetails
+    ServerDetails,
+    BottomFooter
   },
   data: () => ({
     //

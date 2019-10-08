@@ -1,6 +1,5 @@
 <template>
-
-    <v-app-bar app>
+    <v-app-bar app dark color="success">
       <v-toolbar-title class="headline text-uppercase">
         Server Status
       </v-toolbar-title>
